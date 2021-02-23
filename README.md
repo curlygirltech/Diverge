@@ -5,7 +5,7 @@
 Discographi
 
 ## Project Description
-This web app allows the user to search an artist, group, or album to see the history of that artist.
+This web app allows the user to search an artist, group, or album to see the bio, genre and social media of that artist.
 
 ## API and Data Sample
 ```
@@ -46,8 +46,8 @@ https://wireframe.cc/eUWgeK
 #### PostMVP  
 
 - Add an animation that will take place when user opens app
-- Allow the user to search a keyword that will give them songs or albums based on that keyword
-- Browse Top Artists 
+- Allow the user to search a mood keyword (via dropdown menu) that will give them artists based on that mood.
+ 
 
 ## Project Schedule
 
