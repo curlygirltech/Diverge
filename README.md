@@ -2,10 +2,10 @@
 
 ## Project Name
 
-The name of your project with deployed URL.
+Rhythmi
 
 ## Project Description
-This web app allows the user to search an artist, group, or album that allows you to see the history of that artist.
+This web app allows the user to search an artist, group, or album to see the history of that artist.
 
 ## API and Data Sample
 ```
@@ -58,7 +58,7 @@ https://wireframe.cc/eUWgeK
 |Feb 23| Project Approval, App Structure and Psuedocode | Incomplete
 |Feb 24|  Attach Api/append to DOM| Incomplete
 |Feb 24| Create Form/Add Flexbox | Incomplete
-|Feb 25|Attach Social Media  Responsive Deisgn | Incomplete
+|Feb 25|Attach Social Media /Debug| Incomplete
 |Feb 26| Styling the app with advanced CSS and search keyword P-MVP | Incomplete
 |March 1| Presentations | Incomplete
 
