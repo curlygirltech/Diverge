@@ -77,8 +77,8 @@ https://wireframe.cc/zPy0pp
 | Core HTML                       | M         | 2               |               |              |
 | Creating form/functionality     | H         | 3               |               |              |
 | Core CSS/Add Flexbox            | H         | 3               |               |              |
-| Post MVP                        | L         | 3               |               |              |
-| Attaching Social Media          | H         | 3               |               |              |
+| Attaching Social Media          | L         | 3               |               |              |
+| Adding Animation 		  | H         | 3               |               |              |
 | Reponsive Design/ Media querie  | H         | 3               |               |              |
 | Total                           |           | 33 hrs          |               |              |
 
