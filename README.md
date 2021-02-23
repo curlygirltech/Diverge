@@ -5,7 +5,7 @@
 Discographi
 
 ## Project Description
-This web app allows the user to search an artist, group, or album to see the bio, genre and social media of that artist.
+This web app allows the user to search an artist or group to see the bio, genre and social media of that artist.
 
 ## API and Data Sample
 ```
