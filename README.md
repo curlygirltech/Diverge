@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Rhythmi
+Discographi
 
 ## Project Description
 This web app allows the user to search an artist, group, or album to see the history of that artist.
