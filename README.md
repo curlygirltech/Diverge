@@ -73,11 +73,11 @@ https://wireframe.cc/zPy0pp
 | Appending to DOM                | H         | 3               |               |              |
 | Debugging                       | H         | 3               |               |              |
 | Attach API request              | H         | 3               |               |              |
-| Advanced CSS                    | L         | 3               |               |              |
+| Solidify Color themes and layout| L         | 3               |               |              |
 | Core HTML                       | M         | 2               |               |              |
 | Creating form/functionality     | H         | 3               |               |              |
 | Core CSS/Add Flexbox            | H         | 3               |               |              |
-| Attaching Social Media          | L         | 3               |               |              |
+| Attaching Social Media          | M         | 3               |               |              |
 | Adding Animation 		  | H         | 3               |               |              |
 | Reponsive Design/ Media querie  | H         | 3               |               |              |
 | Total                           |           | 33 hrs          |               |              |
