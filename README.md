@@ -41,9 +41,9 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 #### MVP 
 *These are examples only. Replace with your own MVP features.*
 
-- give 
-- Render data on page 
-- Allow user to choose favorites 
+- show/attach social media of each artist
+- Responsive design optimized for phone 
+- 
 
 #### PostMVP  
 
@@ -60,9 +60,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |Feb 22-23| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |Feb 23| Project Approval, App Structure and Psuedocode | Incomplete
-|Feb 24|  | Incomplete
-|Feb 24| Pseudocode / actual code | Incomplete
-|Feb 25| Initial Clickable Model  | Incomplete
+|Feb 24|  Attach Api/append to DOM| Incomplete
+|Feb 24| Create Form/Add Flexbox  | Incomplete
+|Feb 25|Attach Social Media | Incomplete
 |Feb 26| Styling the app with advanced CSS and search keyword P-MVP | Incomplete
 |March 1| Presentations | Incomplete
 
@@ -72,15 +72,19 @@ Include a full list of features that have been prioritized based on the `Time an
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-|  | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Component                       | Priority  | Estimated Time  | Time Invested | Actual Time  |
+|---------------------------------|-----------|-----------------|---------------|--------------|
+| Appending to DOM                | H         | 3               |               |              |
+| Debugging                       | H         | 3               |               |              |
+| Attach API request              | H         | 3               |               |              |
+| Advanced CSS                    | L         | 3               |               |              |
+| Core HTML                       | M         | 2               |               |              |
+| Creating form/functionality     | H         | 3               |               |              |
+| Core CSS/Add Flexbox            | H         | 3               |               |              |
+| Post MVP                        | L         | 3               |               |              |
+| Attaching Social Media          | H         | 3               |               |              |
+| Reponsive Design/ Media querie  | H         | 3               |               |              |
+| Total                           |           | 33 hrs          |               |              |
 
 ## Code Snippet
 
