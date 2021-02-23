@@ -5,7 +5,7 @@
 The name of your project with deployed URL.
 
 ## Project Description
-This web app allows the user to search an artist, group, or album that allows you to look 
+This web app allows the user to search an artist, group, or album that allows you to see the history of that artist.
 
 ## API and Data Sample
 ```
@@ -34,41 +34,37 @@ This web app allows the user to search an artist, group, or album that allows yo
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+https://wireframe.cc/eUWgeK
 
 ### MVP/PostMVP
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
-- show/attach social media of each artist
-- Responsive design optimized for phone 
-- 
+- attach social media of each artist
+- Responsive design optimized for phones/tablets  
 
 #### PostMVP  
 
 - Add an animation that will take place when user opens app
 - Allow the user to search a keyword that will give them songs or albums based on that keyword
+- Browse Top Artists 
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
 |  Day | Deliverable | Status
 |---|---| ---|
 |Feb 22-23| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |Feb 23| Project Approval, App Structure and Psuedocode | Incomplete
 |Feb 24|  Attach Api/append to DOM| Incomplete
-|Feb 24| Create Form/Add Flexbox  | Incomplete
-|Feb 25|Attach Social Media | Incomplete
+|Feb 24| Create Form/Add Flexbox | Incomplete
+|Feb 25|Attach Social Media  Responsive Deisgn | Incomplete
 |Feb 26| Styling the app with advanced CSS and search keyword P-MVP | Incomplete
 |March 1| Presentations | Incomplete
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+https://wireframe.cc/zPy0pp
 
 ## Timeframes
 
