@@ -36,6 +36,12 @@ function fetchData (data) {
 } 
 
 // 4.Append to Artist info
+// switch language Bios
+dataContainer.querySelector('#artist-data') =
+  `
+<p>${data.strBiographyES}</p>
+<p>${data.strBiographyFR}</p>
+<p>${data.strBiographyDE}</p>
 
 const form = document.querySelector('form')
 
