@@ -25,9 +25,14 @@ function fetchData (data) {
   <p>${data.strWebsite}</p>
   <p>${data.strTwitter}</p>
   <p>${data.strFacebook}</p>   
-   `
+  <p>${data.strBiographyEN}</p>
+  `
   console.log(artistInfo)
   dataContainer.insertAdjacentHTML('beforeend', artistInfo)
+
+  if (`${data.strArtistClearart}` === 0) {
+    `${data.strArtistBanner}`
+  } 
 } 
 
 // 4.Append to Artist info
