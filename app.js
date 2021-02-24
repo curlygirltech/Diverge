@@ -6,7 +6,7 @@ async function getMusic(artist) {
   try {
     let response = await axios.get(url)
     let data = response.data.artists[0]
-    console.log(data)
+    // console.log(data)
     fetchData(data)
     return response
   } catch (error) {
@@ -19,10 +19,10 @@ async function getMusic(artist) {
 function fetchData (data) {
   const dataContainer = document.querySelector('#artist-data')
   const artistArr = Object.entries(data)
-  console.log(artistArr)
-  let languageBtn = artistArr.map((arr) => {
+  // console.log(artistArr)
+  // let languageBtn = artistArr.map((arr) => {
     
-  })
+  // })
   const artistInfo = `
   <h1 class="">${data.strArtist}</h1>
   <img src= "${data.strArtistClearart}" alt="Artist pic" class = "Artist-pic"/>
@@ -39,9 +39,17 @@ function fetchData (data) {
   <button class="language-btn" value="PT">PT</button>
   <button class="language-btn" value="DE">DE</button>
   `
-  console.log(artistInfo)
+
+  // console.log(artistInfo)
   dataContainer.insertAdjacentHTML('beforeend', artistInfo)
 
+  const languageBtns = document.querySelectorAll(".language-btn")
+  console.log(languageBtns)
+  languageBtns.forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log('clicked')  
+    })  
+  })
   // if (`${data.strArtistClearart}` === 0) {
   //   `${data.strArtistBanner}`
   // } 
@@ -76,6 +84,9 @@ form.addEventListener('submit', (e) => {
 
   document.querySelector('#search-bar').value = ""
 })
+
+
+
 
 // Make a function to remove Previous Data and clear search bar
 function clearArtist() {
