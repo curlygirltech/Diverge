@@ -11,7 +11,8 @@ async function getMusic(artist) {
     artistData(data, languages)
     return response
   } catch (error) {
-    console.error(error) 
+    console.error(error)
+    
   }
   
   }
