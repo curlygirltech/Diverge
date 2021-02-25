@@ -7,7 +7,7 @@ async function getMusic(artist) {
     let response = await axios.get(url)
     let data = response.data.artists[0]
     const languages = findLanguages(data) 
-    fetchData(data, languages)
+    artistData(data, languages)
     return response
   } catch (error) {
     console.error(error) 
@@ -16,7 +16,7 @@ async function getMusic(artist) {
   }
 // getMusic('drake')
 
-function fetchData /*change name*/ (data, languages) {
+function artistData /*change name*/ (data, languages) {
   const dataContainer = document.querySelector('#artist-data')
   const artistArr = Object.entries(data)
   // console.log(artistArr)
@@ -32,13 +32,16 @@ function fetchData /*change name*/ (data, languages) {
   <img src= "${data.strArtistClearart}" alt="Artist pic" class = "Artist-pic"/>
   <h2>${data.strGenre}</h2>
   <p>${data.strWebsite}</p>
-  <p>${data.strTwitter}</p>
-  <p>${data.strFacebook}</p>   
+  <p id = 'twitter-link'>${data.strTwitter}</p>
+  <p id = 'facebook-link'>${data.strFacebook}</p>   
   <p>${data.strBiographyEN}</p>  
   `
-
-  // console.log(artistInfo)
   dataContainer.insertAdjacentHTML('beforeend', artistInfo)
+  const facebookLink = document.getElementById('#facebook-link')
+  const twitterLink = document.getElementById('#twitter-link')
+  twitterLink.setAttribute = ('href', 'data.strTwitter')
+  facebookLink.setAttribute = ('href', 'data.strFacebook')
+  console.log(twitterLink, facebookLink)
 
   const languageBtns = document.querySelectorAll(".language-btn")
   console.log(languageBtns)
@@ -110,4 +113,3 @@ const findLanguages = (data) => {
 
 
 
-// let trimmedLang = languageItem && 
