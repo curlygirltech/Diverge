@@ -29,3 +29,15 @@ img{
   background-color: white;
   opacity: 0.7;
 }
+#Button{
+  background: none;
+  color: #ccc;
+  width: 200px;
+  height: 40px;
+  border:1px solid;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: .6s;
+  overflow: hidden;
+  
+}

@@ -39,12 +39,11 @@ function artistData (data, languages) {
   dataContainer.insertAdjacentHTML('beforeend', artistInfo)
   // Add Social Media handles
   const twitterLink = document.getElementById('twitter-link')
-  twitterLink.setAttribute = ('href', 'data.strTwitter')
+  twitterLink.setAttribute = ('href', `www.twitter.com/${data.strTwitter}`)
   twitterLink.innerHTML = 'Twitter'
   console.log(twitterLink)
   const facebookLink = document.getElementById('facebook-link')
   facebookLink.href = 'data.strFacebook'
-  document.body.appendChild(facebookLink)
   facebookLink.innerHTML = 'Facebook'
   console.log(facebookLink)
 
