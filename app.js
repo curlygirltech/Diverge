@@ -6,8 +6,8 @@ async function getMusic(artist) {
   try {
     let response = await axios.get(url)
     let data = response.data.artists[0]
-    // console.log(data)
-    fetchData(data)
+    const languages = findLanguages(data) 
+    fetchData(data, languages)
     return response
   } catch (error) {
     console.error(error) 
@@ -16,13 +16,17 @@ async function getMusic(artist) {
   }
 // getMusic('drake')
 
-function fetchData (data) {
+function fetchData /*change name*/ (data, languages) {
   const dataContainer = document.querySelector('#artist-data')
   const artistArr = Object.entries(data)
   // console.log(artistArr)
   // let languageBtn = artistArr.map((arr) => {
     
   // })
+  languages.forEach(language => {
+    const val = 'strBiography' + language
+    console.log(val)
+  })
   const artistInfo = `
   <h1 class="">${data.strArtist}</h1>
   <img src= "${data.strArtistClearart}" alt="Artist pic" class = "Artist-pic"/>
@@ -30,14 +34,7 @@ function fetchData (data) {
   <p>${data.strWebsite}</p>
   <p>${data.strTwitter}</p>
   <p>${data.strFacebook}</p>   
-  <p>${data.strBiographyEN}</p>
-  <button class="language-btn" value="ES">ES</button>
-  <button class="language-btn" value="FR">FR</button>
-  <button class="language-btn" value="CN">CN</button>
-  <button class="language-btn" value="JP">JP</button>
-  <button class="language-btn" value="IT">IT</button>
-  <button class="language-btn" value="PT">PT</button>
-  <button class="language-btn" value="DE">DE</button>
+  <p>${data.strBiographyEN}</p>  
   `
 
   // console.log(artistInfo)
@@ -46,8 +43,11 @@ function fetchData (data) {
   const languageBtns = document.querySelectorAll(".language-btn")
   console.log(languageBtns)
   languageBtns.forEach((button) => {
-    button.addEventListener("click", () => {
-      console.log('clicked')  
+    button.addEventListener("click", (e) => {
+      console.log(e.target.value)
+      const artistKey = Object.key(data)
+      console.log(artistKey)
+      // compare the value of the btn with the key of the data obj where the value of the btn and the data objkey are = 
     })  
   })
   // if (`${data.strArtistClearart}` === 0) {
@@ -97,3 +97,17 @@ function clearArtist() {
   }
     
 }
+
+const findLanguages = (data) => {
+  const validLanguages = []
+  const languageItems = Object.keys(data).filter(item => item.includes('strBiography'))  
+  languageItems && languageItems.forEach(item => {    
+    const bio = data[item]
+    bio && validLanguages.push(item.slice(-2))
+  })
+  return validLanguages
+}
+
+
+
+// let trimmedLang = languageItem && 
