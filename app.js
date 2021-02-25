@@ -16,7 +16,7 @@ async function getMusic(artist) {
   }
 // getMusic('drake')
 
-function artistData /*change name*/ (data, languages) {
+function artistData (data, languages) {
   const dataContainer = document.querySelector('#artist-data')
   const artistArr = Object.entries(data)
   // console.log(artistArr)
@@ -37,11 +37,16 @@ function artistData /*change name*/ (data, languages) {
   <p>${data.strBiographyEN}</p>  
   `
   dataContainer.insertAdjacentHTML('beforeend', artistInfo)
-  const facebookLink = document.getElementById('#facebook-link')
-  const twitterLink = document.getElementById('#twitter-link')
+  // Add Social Media handles
+  const twitterLink = document.getElementById('twitter-link')
   twitterLink.setAttribute = ('href', 'data.strTwitter')
-  facebookLink.setAttribute = ('href', 'data.strFacebook')
-  console.log(twitterLink, facebookLink)
+  twitterLink.innerHTML = 'Twitter'
+  console.log(twitterLink)
+  const facebookLink = document.getElementById('facebook-link')
+  facebookLink.href = 'data.strFacebook'
+  document.body.appendChild(facebookLink)
+  facebookLink.innerHTML = 'Facebook'
+  console.log(facebookLink)
 
   const languageBtns = document.querySelectorAll(".language-btn")
   console.log(languageBtns)
