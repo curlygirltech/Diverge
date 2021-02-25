@@ -6,6 +6,7 @@ async function getMusic(artist) {
   try {
     let response = await axios.get(url)
     let data = response.data.artists[0]
+    console.log(data)
     const languages = findLanguages(data) 
     artistData(data, languages)
     return response
@@ -32,20 +33,13 @@ function artistData (data, languages) {
   <img src= "${data.strArtistClearart}" alt="Artist pic" class = "Artist-pic"/>
   <h2>${data.strGenre}</h2>
   <p>${data.strWebsite}</p>
-  <p id = 'twitter-link'>${data.strTwitter}</p>
-  <p id = 'facebook-link'>${data.strFacebook}</p>   
+  <a id='twitter-link' href='http://${data.strTwitter}' target="_blank">Twitter</a>
+  <a id='facebook-link' href='http://${data.strFacebook}' target="_blank">Facebook</a>   
   <p>${data.strBiographyEN}</p>  
   `
   dataContainer.insertAdjacentHTML('beforeend', artistInfo)
   // Add Social Media handles
-  const twitterLink = document.getElementById('twitter-link')
-  twitterLink.setAttribute = ('href', `www.twitter.com/${data.strTwitter}`)
-  twitterLink.innerHTML = 'Twitter'
-  console.log(twitterLink)
-  const facebookLink = document.getElementById('facebook-link')
-  facebookLink.href = 'data.strFacebook'
-  facebookLink.innerHTML = 'Facebook'
-  console.log(facebookLink)
+  
 
   const languageBtns = document.querySelectorAll(".language-btn")
   console.log(languageBtns)
