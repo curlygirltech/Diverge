@@ -43,7 +43,8 @@ function artistData(data) {        //this function takes the Artist's info and a
     dataContainer.removechild(childNode)
   }
   if (data.strArtistClearart === null) {
-    let nullImg = document.querySelector  
+    let nullImg = document.querySelector('.artist-img')
+    nullImg.replaceChild(data.strArtistBanner, data.strArtistClearart)
   }
 }
 
