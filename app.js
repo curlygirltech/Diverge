@@ -9,14 +9,12 @@ async function searchArtist(artist) { //this function searches for artist in API
     let data = response.data.artists[0]
     console.log(data)
     artistData(data)
-    if (data === null) {
-      let errorMessage = document.querySelector('#artistData')
-      errorMessage.createTextNode('Sorry this artist isn\'t available. Try another one.' ) 
-      
-    }return response
+    return response
   } catch (error) {
     console.error(error)
-    alert('Sorry, that artist is not available')
+    let errorMessage = document.createElement('h1')
+    errorMessage.textContent = 'Sorry this artist isn\'t available. Try another one.'
+    document.body.append(errorMessage)
   }
 }
 
@@ -25,28 +23,63 @@ async function searchArtist(artist) { //this function searches for artist in API
 function artistData(data) {        //this function takes the Artist's info and appends it to the DOM
   const dataContainer = document.querySelector('#artist-data') // we are making changes to this div
 
-  
-    const artistInfo = `
-    <h1 class="">${data.strArtist}</h1>
-    <img class="artist-img" src= "${data.strArtistClearart}" alt="Artist pic" class = "Artist-pic"/>
-    <h2>${data.strGenre}</h2>
-    <p>${data.strWebsite}</p>
-    <a class='social-link' href='http://${data.strTwitter}' target="_blank">Twitter</a>
-    <a class='social-link' href='http://${data.strFacebook}' target="_blank">Facebook</a>   
-    <p>${data.strBiographyEN}</p>  
-  `
-  dataContainer.insertAdjacentHTML('beforeend', artistInfo)
+  let artistName = document.createElement('h1')
+  artistName.textContent = data.strArtist
+  dataContainer.append(artistName)
 
-  //Conditionals for missing info
-  if (data.strTwitter === null || data.strFacebook === null) {  
-    let childNode = document.querySelectorAll('.social-link')
-    console.log(childNode)
-    dataContainer.removechild(childNode)
+  if (data.strArtistClearart) {
+    let artistImg = document.createElement('img')
+    artistImg.src = data.strArtistClearart
+    dataContainer.append(artistImg)
   }
-  if (data.strArtistClearart === null) {
-    let nullImg = document.querySelector('.artist-img')
-    nullImg.replaceChild(data.strArtistBanner, data.strArtistClearart)
+
+  if (!data.strArtistClearart) {
+    let replaceImg = document.createElement('img')
+    replaceImg.src = data.strArtistBanner
+    dataContainer.append(replaceImg)
+  } else {
+    dataContainer.removeChild(img)
   }
+
+  let artistGenre = document.createElement('h2')
+  artistGenre.textContent = data.strGenre
+  dataContainer.append(artistGenre)
+
+  let artistWebsite = document.createElement('a')
+  let webLinkText = document.createTextNode('Website')
+  artistWebsite.append(webLinkText)
+  artistWebsite.title = 'Website'
+  artistWebsite.href = `http://${data.strWebsite}` //fix this link
+  dataContainer.appendChild(artistWebsite)
+
+  let artistBio = document.createElement('p')
+  artistBio.textContent = data.strBiographyEN
+  dataContainer.append(artistBio)
+
+
+  // //Conditionals for missing info
+
+  if (data.strTwitter) {
+    let twitterLink =  document.createElement('a')
+    let webLinkText = document.createTextNode('Twitter')
+    twitterLink.append(webLinkText)
+    twitterLink.title = 'Twitter'
+    twitterLink.href = `http://${data.strTwitter}`  //fix this link
+    dataContainer.append(twitterLink)
+  }
+
+  if (data.strFacebook) {
+    let facebookLink =  document.createElement('a')
+    let webLinkText = document.createTextNode('Facebook')
+    facebookLink.append(webLinkText)
+    facebookLink.title = 'Facebook'
+    facebookLink.href = `http://${data.strFacebook}` //fix this link
+    dataContainer.append(facebookLink)
+  }
+  // if (data.strArtistClearart === null) {
+  //   // let nullImg = document.querySelector('.artist-img')
+  //   // nullImg.replaceChild(data.strArtistClearart, data.strArtistBanner)
+  // }
 }
 
 
@@ -71,4 +104,4 @@ function clearArtist() {
   }
 }
 
-console.log(new Date())
+// console.log(new Date())

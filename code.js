@@ -27,15 +27,15 @@
 //     const val = 'strBiography' + language
 //     console.log(val)
 //   })
-//   const artistInfo = `
-//   <h1 class="">${data.strArtist}</h1>
-//   <img src= "${data.strArtistClearart}" alt="Artist pic" class = "Artist-pic"/>
-//   <h2>${data.strGenre}</h2>
-//   <p>${data.strWebsite}</p>
-//   <a id='twitter-link' href='http://${data.strTwitter}' target="_blank">Twitter</a>
-//   <a id='facebook-link' href='http://${data.strFacebook}' target="_blank">Facebook</a>   
-//   <p>${data.strBiographyEN}</p>  
-//   `
+  const artistInfo = `
+  <h1 class="">${data.strArtist}</h1>
+  <img src= "${data.strArtistClearart}" alt="Artist pic" class = "Artist-pic"/>
+  <h2>${data.strGenre}</h2>
+  <p>${data.strWebsite}</p>
+  <a id='twitter-link' href='http://${data.strTwitter}' target="_blank">Twitter</a>
+  <a id='facebook-link' href='http://${data.strFacebook}' target="_blank">Facebook</a>   
+  <p>${data.strBiographyEN}</p>  
+  `
 //   dataContainer.insertAdjacentHTML('beforeend', artistInfo)
 //   // 
   
