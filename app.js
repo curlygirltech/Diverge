@@ -7,14 +7,15 @@ async function searchArtist(artist) { //this function searches for artist in API
   try {
     let response = await axios.get(url)
     let data = response.data.artists[0]
-    console.log(data)  
+    console.log(data)
+    artistData(data)
     return response
   } catch (error) {
     console.error(error)
     alert('Sorry, that artist is not available')
   }
 }
-searchArtist('Drake')
+
 
 
 function artistData(data) {        //this function takes the Artist's info and appends it to the DOM
@@ -31,11 +32,21 @@ function artistData(data) {        //this function takes the Artist's info and a
     <p>${data.strBiographyEN}</p>  
   `
     dataContainer.insertAdjacentHTML('beforeend', artistInfo)
-  let twitter = `${data.strTwitter}`
-  console.log(twitter)
-    // if (twitter === null) {
-    //    dataContainer
-    // }
   
-}  
-    
+  
+}
+
+
+const handleSubmit = (e) => {       //this function is an event handler attached to a form  
+  e.preventDefault()
+  const searchValue = document.querySelector('#search-bar').value  //take the value of what was entered in the search and store  
+  // clearArtist()
+  searchArtist(searchValue)
+  console.log(searchValue)
+  // document.querySelector('#search-bar').value = ""    
+}
+const button = document.querySelector('#artist-search') //event handler
+button.addEventListener('submit', handleSubmit)
+
+
+
