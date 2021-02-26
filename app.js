@@ -38,7 +38,9 @@ function artistData(data) {        //this function takes the Artist's info and a
     replaceImg.src = data.strArtistBanner
     dataContainer.append(replaceImg)
   } else {
-    dataContainer.removeChild(img)
+    dataContainer.img.style.display = none
+    // let noPic = document.body.dataContainer('img')
+    // noPic.removeChild();
   }
 
   let artistGenre = document.createElement('h2')
