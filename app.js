@@ -7,15 +7,16 @@ async function searchArtist(artist) { //this function searches for artist in API
   try {
     let response = await axios.get(url)
     let data = response.data.artists[0]
+    console.log(data)
     artistData(data)
-    return response
+    if (data === null) {
+      let errorMessage = document.querySelector('#artistData')
+      errorMessage.createTextNode('Sorry this artist isn\'t available. Try another one.' ) 
+      
+    }return response
   } catch (error) {
     console.error(error)
     alert('Sorry, that artist is not available')
-    if (response === null) {
-      let errorMessage = document.querySelector('#artistData')
-      errorMessage.createTextNode('Sorry this artist isn\'t available. Try another one.' ) 
-    }
   }
 }
 
@@ -69,3 +70,5 @@ function clearArtist() {
     artistContainer.removeChild(artistContainer.lastChild)
   }
 }
+
+console.log(new Date())
