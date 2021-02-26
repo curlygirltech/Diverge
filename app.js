@@ -12,6 +12,10 @@ async function searchArtist(artist) { //this function searches for artist in API
   } catch (error) {
     console.error(error)
     alert('Sorry, that artist is not available')
+    if (response === null) {
+      let errorMessage = document.querySelector('#artistData')
+      errorMessage.createTextNode('Sorry this artist isn\'t available. Try another one.' ) 
+    }
   }
 }
 
@@ -23,14 +27,24 @@ function artistData(data) {        //this function takes the Artist's info and a
   
     const artistInfo = `
     <h1 class="">${data.strArtist}</h1>
-    <img src= "${data.strArtistClearart}" alt="Artist pic" class = "Artist-pic"/>
+    <img class="artist-img" src= "${data.strArtistClearart}" alt="Artist pic" class = "Artist-pic"/>
     <h2>${data.strGenre}</h2>
     <p>${data.strWebsite}</p>
-    <a id='twitter-link' href='http://${data.strTwitter}' target="_blank">Twitter</a>
-    <a id='facebook-link' href='http://${data.strFacebook}' target="_blank">Facebook</a>   
+    <a class='social-link' href='http://${data.strTwitter}' target="_blank">Twitter</a>
+    <a class='social-link' href='http://${data.strFacebook}' target="_blank">Facebook</a>   
     <p>${data.strBiographyEN}</p>  
   `
-    dataContainer.insertAdjacentHTML('beforeend', artistInfo)
+  dataContainer.insertAdjacentHTML('beforeend', artistInfo)
+
+  //Conditionals for missing info
+  if (data.strTwitter === null || data.strFacebook === null) {  
+    let childNode = document.querySelectorAll('.social-link')
+    console.log(childNode)
+    dataContainer.removechild(childNode)
+  }
+  if (data.strArtistClearart === null) {
+    let nullImg = document.querySelector  
+  }
 }
 
 
