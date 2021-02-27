@@ -7,7 +7,6 @@ async function searchArtist(artist) { //this function searches for artist in API
   try {
     let response = await axios.get(url)
     let data = response.data.artists[0]
-    console.log(data)
     artistData(data)
     return response
   } catch (error) {
@@ -33,26 +32,24 @@ function artistData(data) {        //this function takes the Artist's info and a
     dataContainer.append(artistImg)
   }
 
-  if (!data.strArtistClearart) {
-    let replaceImg = document.createElement('img')
-    replaceImg.src = data.strArtistBanner
-    dataContainer.append(replaceImg)
-  } else {
-    dataContainer.img.style.display = none
-    // let noPic = document.body.dataContainer('img')
-    // noPic.removeChild();
+  if (!data.strArtistClearart || !data.strArtistBanner) {
+    let noPic = document.createElement('h2')
+    noPic.textContent = 'Sorry, no image available'
+    dataContainer.append(noPic)
   }
 
   let artistGenre = document.createElement('h2')
   artistGenre.textContent = data.strGenre
   dataContainer.append(artistGenre)
 
-  let artistWebsite = document.createElement('a')
-  let webLinkText = document.createTextNode('Website')
-  artistWebsite.append(webLinkText)
-  artistWebsite.title = 'Website'
-  artistWebsite.href = `http://${data.strWebsite}` //fix this link
-  dataContainer.appendChild(artistWebsite)
+  if (data.strWebsite) {
+    let artistWebsite = document.createElement('a')
+    let webLinkText = document.createTextNode('Website')
+    artistWebsite.append(webLinkText)
+    artistWebsite.title = 'Website'
+    artistWebsite.href = `http://${data.strWebsite}` //fix this link
+    dataContainer.appendChild(artistWebsite)
+  }
 
   let artistBio = document.createElement('p')
   artistBio.textContent = data.strBiographyEN
@@ -62,7 +59,7 @@ function artistData(data) {        //this function takes the Artist's info and a
   // //Conditionals for missing info
 
   if (data.strTwitter) {
-    let twitterLink =  document.createElement('a')
+    let twitterLink = document.createElement('a')
     let webLinkText = document.createTextNode('Twitter')
     twitterLink.append(webLinkText)
     twitterLink.title = 'Twitter'
@@ -71,17 +68,13 @@ function artistData(data) {        //this function takes the Artist's info and a
   }
 
   if (data.strFacebook) {
-    let facebookLink =  document.createElement('a')
+    let facebookLink = document.createElement('a')
     let webLinkText = document.createTextNode('Facebook')
     facebookLink.append(webLinkText)
     facebookLink.title = 'Facebook'
     facebookLink.href = `http://${data.strFacebook}` //fix this link
     dataContainer.append(facebookLink)
   }
-  // if (data.strArtistClearart === null) {
-  //   // let nullImg = document.querySelector('.artist-img')
-  //   // nullImg.replaceChild(data.strArtistClearart, data.strArtistBanner)
-  // }
 }
 
 
@@ -106,4 +99,3 @@ function clearArtist() {
   }
 }
 
-// console.log(new Date())

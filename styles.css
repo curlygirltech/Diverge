@@ -5,6 +5,7 @@ body {
   background-image: url(https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
   /* background-size: cover; */
   background-repeat: no-repeat;
+  /* background-image: ; */
 }
 
 
@@ -19,8 +20,12 @@ h2{
 }
 
 #artist-search{
+  margin-top: 20%;
+  display: flex;
+  flex-flow:row;
 
-  align-items: center;
+  justify-content:center;
+  align-content: center;
 } 
 
 img{
@@ -37,12 +42,16 @@ img{
   color: black;
   width: 200px;
   height: 40px;
+  padding: 10px;
   border:1px solid black;
   font-size: 18px;
   border-radius: 8px;
-  transition: .6s;
-  /* transform: translate(-50%, -50); */
-  overflow: hidden;
+  /* transition: .6s;
+  transform: translate(-50%, -50);
+  overflow: hidden; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
 
 }
 
@@ -50,61 +59,33 @@ img{
   outline: none;
 }
 
-#Button:before{
-  content: '';
-  background:rgba(255, 255, 255, .5);
-  width: 60px;
-  height: 100%;
-  left: 0;
-  top: 0;
-  opacity:.5s;
-  filter: blur(30px);
-  transform: translateX(-130px) skewX(-15deg);
-
-}
-
-#Button:after{
-  content: '';
-  background: rgba(255, 255, 255, .2);
-  width: 30px;
-  height:100%;
-  left:30px;
-  top:0;
-  opacity: 0;
-  filter: blur(30px);
-  transform: translate(-100px) scaleX(-15deg);
-}
-
-
 #Button:hover{
   Background:#EDC79B;
   cursor: pointer;
 }
 
-#Button:hover:before{
-  transform: translate(300px) skewX(-15deg);
-  opacity: .6;
-  transition: .7s;
 
-}
-
-#Button:hover:after{
-  transform: translateX(300px) skewX(-15deg);
-  opacity: .6;
-  transition: .7s;
-
-}
-
-@media only screen and (maxwidth: 400px){
-  body {
+@media only screen and (max-width: 400px){
+  /* body {
     display: flex;
     flex-flow: column nowrap;
     font-family: 'Bebas Neue', cursive;
     background-image: url(https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+    background-size: cover;
   }
   p{
     text-align: center;
+  } */
+
+  #artist-search{
+    flex-flow: column;
+    margin-top:25%;
+  }
+
+  #search-bar{
+    
   }
 }
+
 
 
