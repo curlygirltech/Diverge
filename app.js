@@ -8,6 +8,7 @@ async function searchArtist(artist) { //this function searches for artist in API
     let response = await axios.get(url)
     let data = response.data.artists[0]
     artistData(data)
+    console.log(data)
     return response
   } catch (error) {
     console.error(error)
@@ -47,7 +48,7 @@ function artistData(data) {        //this function takes the Artist's info and a
     let webLinkText = document.createTextNode('Website')
     artistWebsite.append(webLinkText)
     artistWebsite.title = 'Website'
-    artistWebsite.href = `http://${data.strWebsite}` //fix this link
+    artistWebsite.href = `http://${data.strWebsite}` 
     dataContainer.appendChild(artistWebsite)
   }
 
@@ -63,7 +64,7 @@ function artistData(data) {        //this function takes the Artist's info and a
     let webLinkText = document.createTextNode('Twitter')
     twitterLink.append(webLinkText)
     twitterLink.title = 'Twitter'
-    twitterLink.href = `http://${data.strTwitter}`  //fix this link
+    twitterLink.href = `http://${data.strTwitter}`  
     dataContainer.append(twitterLink)
   }
 
@@ -72,7 +73,7 @@ function artistData(data) {        //this function takes the Artist's info and a
     let webLinkText = document.createTextNode('Facebook')
     facebookLink.append(webLinkText)
     facebookLink.title = 'Facebook'
-    facebookLink.href = `http://${data.strFacebook}` //fix this link
+    facebookLink.href = `http://${data.strFacebook}` 
     dataContainer.append(facebookLink)
   }
 }

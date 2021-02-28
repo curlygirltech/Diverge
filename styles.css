@@ -1,12 +1,23 @@
+html{
+  /* background-color: rgba(190, 150, 50); */
+}
+
+
+
 body {
   display: flex;
   flex-flow: column nowrap;
   font-family: 'Bebas Neue', cursive;
   background-image: url(https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
-  /* background-size: cover; */
   background-repeat: no-repeat;
-  /* background-image: ; */
+  height: 100vh;
+  background-size: auto;
 }
+/* .flex-container{
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+} */
 
 .tagline{
   font-size: 30px;
@@ -21,72 +32,86 @@ body {
 h2{
   font-family: 'Poiret One', cursive;
   font-size: 20px;
-  
 }
+
+
 
 #artist-search{
   margin-top: 10%;
   display: flex;
   flex-flow:row;
   justify-content:center;
-  align-content: center;
+  align-content: center;  
 } 
 
+#search-bar{
+  background: rgba(225,225,225, .3);
+  /* background: none; */
+  width: 300px;
+  /* height: 40px; */
+  border-radius: 8px;
+  border:1px solid black;
+  /* padding: 10px; */
+  font-size: 18px;
+  color:black;
+  /* opacity: 1; */
+}
+
+
+
 img{
- width: 500px;
- background-color: gray;
+width: 500px;
+background-color: gray;
 }
 
 #artist-data{
   background-color: white;
   opacity: 0.7;
+  align-content: center;
 }
+
 #Button{
-  background: none;
-  color: black;
+  background:rgba(0,0,0,.7); 
+  color: white;
   width: 200px;
   height: 40px;
   padding: 10px;
   border:1px solid black;
   font-size: 18px;
   border-radius: 8px;
-  /* transition: .6s;
-  transform: translate(-50%, -50);
-  overflow: hidden; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
+
 
 }
 
-#Button:focus{
-  outline: none;
-}
+/* #Button:focus{ */
+  /* outline: none; */
+/* } */
 
-#Button:hover{
-  Background:#EDC79B;
-  cursor: pointer;
+a {
+  margin-right: 1em !important;
+  
 }
-
 
 @media only screen and (max-width: 400px){
-  /* body {
-    display: flex;
-    flex-flow: column nowrap;
-    font-family: 'Bebas Neue', cursive;
-    background-image: url(https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
-    background-size: cover;
-  }
-  p{
-    text-align: center;
-  } */
-
-
+  
   body {
-    background-image: url(https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
-    /* height: 50%; */
+    display: flex;
+    background: #ffbc42;
+    flex-flow: column no wrap;
+    text-align: center;
+    height: 100vh;
   }
+
+  .h1-title{
+    font-size: 50px;
+  }
+
+  .tagline{
+    font-size: 20px;
+  }
+
   #artist-search{
+    align-items: center;
     flex-flow: column;
     margin-top:25%;
   }
@@ -95,6 +120,12 @@ img{
     width: 200px;
     margin-bottom: 15px;
   }
+
+  img{
+    max-width: 200px;
+    background-color:none;
+  }
+
 }
 
 
