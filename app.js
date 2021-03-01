@@ -3,7 +3,7 @@
 // Use an Async function using try/catch that returns a response 
 
 async function searchArtist(artist) { //this function searches for artist in API
-  const url = `http://theaudiodb.com/api/v1/json/1/search.php?s=${artist}`
+  const url = `https://theaudiodb.com/api/v1/json/1/search.php?s=${artist}`
   try {
     let response = await axios.get(url)
     let data = response.data.artists[0]
