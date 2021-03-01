@@ -1,9 +1,3 @@
-html{
-  /* background-color: rgba(190, 150, 50); */
-}
-
-
-
 body {
   display: flex;
   flex-flow: column nowrap;
@@ -13,12 +7,6 @@ body {
   height: 100vh;
   background-size: auto;
 }
-/* .flex-container{
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-} */
-
 
 .tagline{
   font-size: 30px;
@@ -35,11 +23,8 @@ h2{
   font-size: 20px;
 }
 
-
-
 #artist-search{
-  /* margin-top: 10%; */
-  display: flex;
+   display: flex;
   flex-flow:row;
   justify-content:center;
   align-content: center; 
@@ -53,13 +38,11 @@ h2{
   /* height: 40px; */
   border-radius: 8px;
   border:1px solid black;
-  /* padding: 10px; */
+  
   font-size: 18px;
   color:black;
   /* opacity: 1; */
 }
-
-
 
 img{
 width: 500px;
@@ -89,10 +72,12 @@ background-color: gray;
 
 
 a {
-  margin-right: 1em !important;
-  
+  margin-right: 1em !important;  
 }
 
+
+
+/* Media Query */
 @media only screen and (max-width: 400px){
   
   body {

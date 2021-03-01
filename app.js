@@ -1,6 +1,6 @@
-// Create an APP that uses an API to get data and append it to the DOM.
 
-// Use an Async function using try/catch that returns a promise 
+
+// Use an Async function using try/catch that returns a response 
 
 async function searchArtist(artist) { //this function searches for artist in API
   const url = `http://theaudiodb.com/api/v1/json/1/search.php?s=${artist}`
@@ -8,7 +8,6 @@ async function searchArtist(artist) { //this function searches for artist in API
     let response = await axios.get(url)
     let data = response.data.artists[0]
     artistData(data)
-    console.log(data)
     return response
   } catch (error) {
     console.error(error)
@@ -19,9 +18,9 @@ async function searchArtist(artist) { //this function searches for artist in API
 }
 
 
-
-function artistData(data) {        //this function takes the Artist's info and appends it to the DOM
-  const dataContainer = document.querySelector('#artist-data') // we are making changes to this div
+// Append to the DOM
+function artistData(data) {        
+  const dataContainer = document.querySelector('#artist-data') 
 
   let artistName = document.createElement('h1')
   artistName.textContent = data.strArtist
@@ -78,10 +77,10 @@ function artistData(data) {        //this function takes the Artist's info and a
   }
 }
 
-
-const handleSubmit = (e) => {       //this function is an event handler attached to a form  
+// Stores the value put in the search bar
+const handleSubmit = (e) => {         
   e.preventDefault()
-  const searchValue = document.querySelector('#search-bar').value  //take the value of what was entered in the search and store  
+  const searchValue = document.querySelector('#search-bar').value  
   clearArtist()
   searchArtist(searchValue)
   document.querySelector('#search-bar').value = ""    

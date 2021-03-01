@@ -53,11 +53,11 @@ https://wireframe.cc/eUWgeK
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Feb 22-23| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Feb 23| Project Approval, App Structure and Psuedocode | Incomplete
-|Feb 24|  Attach Api/append to DOM| Incomplete
-|Feb 24| Create Form/Add Flexbox | Incomplete
-|Feb 25|Attach Social Media /Debug| Incomplete
+|Feb 22-23| Prompt / Wireframes / Priority Matrix / Timeframes |Complete
+|Feb 23| Project Approval, App Structure and Psuedocode | Complete
+|Feb 24|  Attach Api/append to DOM| Complete
+|Feb 24| Create Form/Add Flexbox | Complete
+|Feb 25|Attach Social Media /Debug| Complete
 |Feb 26| Styling the app with advanced CSS and search keyword P-MVP | Incomplete
 |March 1| Presentations | Incomplete
 
@@ -69,27 +69,34 @@ https://wireframe.cc/zPy0pp
 
 | Component                       | Priority  | Estimated Time  | Time Invested | Actual Time  |
 |---------------------------------|-----------|-----------------|---------------|--------------|
-| Appending to DOM                | H         | 3               |               |              |
-| Debugging                       | H         | 3               |               |              |
-| Attach API request              | H         | 3               |               |              |
-| Solidify Color themes and layout| L         | 3               |               |              |
-| Core HTML                       | M         | 2               |               |              |
-| Creating form/functionality     | H         | 3               |               |              |
-| Core CSS/Add Flexbox            | H         | 3               |               |              |
-| Attaching Social Media          | M         | 3               |               |              |
-| Adding Animation 		  | H         | 3               |               |              |
-| Reponsive Design/ Media querie  | H         | 3               |               |              |
-| Total                           |           | 33 hrs          |               |              |
+| Appending to DOM                | H         | 3               |             6 |              |
+| Debugging                       | H         | 3               |             5 |              |
+| Attach API request              | H         | 3               |             3 |              |
+| Solidify Color themes and layout| L         | 3               |             2 |              |
+| Core HTML                       | M         | 2               |             3 |              |
+| Creating form/functionality     | H         | 3               |             3 |              |
+| Core CSS/Add Flexbox            | H         | 3               |             4 |              |
+| Attaching Social Media          | M         | 3               |             3 |              |
+| Adding Animation 		            | H         | 3               |             2 |              |
+| Reponsive Design/ Media querie  | H         | 3               |             2 |              |
+| Total                           |           | 33 hrs          |         33 hrs|              |
 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+ <!-- let artistName = document.createElement('h1')
+  artistName.textContent = data.strArtist
+  dataContainer.append(artistName)
+
+  if (data.strArtistClearart) {
+    let artistImg = document.createElement('img')
+    artistImg.src = data.strArtistClearart
+    dataContainer.append(artistImg)
+  } -->
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+
+Search Bar Animations with CSS- The animations I wanted add would have crashed my JS code, I will revisit it at a later time.
