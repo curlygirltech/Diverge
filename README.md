@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Discographi
+[Discographi](https://curlygirltech.github.io/Discographi/)
 
 ## Project Description
 This web app allows the user to search an artist or group to see the bio, genre and social media of that artist.
