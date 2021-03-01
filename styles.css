@@ -87,9 +87,6 @@ background-color: gray;
   border-radius: 8px;
 }
 
-/* #Button:focus{ */
-  /* outline: none; */
-/* } */
 
 a {
   margin-right: 1em !important;
@@ -100,7 +97,7 @@ a {
   
   body {
     display: flex;
-    background: #ffbc42;
+    background: #ffc8dd;
     flex-flow: column no wrap;
     text-align: center;
     height: 100vh;
