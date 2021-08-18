@@ -1,8 +1,10 @@
 ![Diverge](https://raw.githubusercontent.com/curlygirltech/Discographi/main/Diverge.png)
 
 
-## Project Description
-helping therapists enable behavior change for clients on the autism spectrum
+## Motivation
+
+As a behavior therapist for 4 years with a background in education, I researched and studied the behavior of individuals on the spectrum. Based on that data, I created tailored plans for them to display positive behaviors and live more fulfilling lives. One of the biggest challenges as a therapist was finding ways and for clients to express themselves and understand the root of a behavior. Diverge is a tool created for therapists to analyze data from their research and create a list of common emotions/moods. From this list, a playlist is created with suggested songs to aid in mood mangement as a form of Music Therapy.
+
 
 ## API and Data Sample
 ```json
