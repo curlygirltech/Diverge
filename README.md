@@ -2,7 +2,7 @@
 
 
 ## Project Description
-
+helping therapists enable behavior change for clients on the autism spectrum
 
 ## API and Data Sample
 ```json
