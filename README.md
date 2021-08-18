@@ -6,6 +6,9 @@
 As a behavior therapist for 4 years with a background in education, I researched and studied the behavior of individuals on the spectrum. Based on that data, I created tailored plans for them to display positive behaviors and live more fulfilling lives. One of the biggest challenges as a therapist was finding ways and for clients to express themselves and understand the root of a behavior. Diverge is a tool created for therapists to analyze data from their research and create a list of common emotions/moods. From this list, a playlist is created with suggested songs to aid in mood mangement as a form of Music Therapy.
 
 
+
+![Process](https://raw.githubusercontent.com/curlygirltech/Diverge/main/diverge-process.png)
+
 ## API and Data Sample
 ```json
 {
@@ -32,49 +35,34 @@ As a behavior therapist for 4 years with a background in education, I researched
 
 ![Process](https://raw.githubusercontent.com/curlygirltech/Diverge/main/diverge-process.png)
 
-### MVP/PostMVP
-
-#### MVP 
-
-- render Artist name, image, Website, and social media, to the DOM
-- Allow user to search by artist
-- Clear old Data on new search input
-
-#### PostMVP  
-
-- Add an animation that will take place when user opens app
-- Convert Bio to different languages
+Engineering Milestones
 
 
 
-## Timeframes
+Research Progress - 
 
-| Component                       | Priority  | Estimated Time  | Time Invested | Actual Time  |
-|---------------------------------|-----------|-----------------|---------------|--------------|
-| Appending to DOM                | H         | 3               |             6 |              |
-| Debugging                       | H         | 3               |             5 |              |
-| Attach API request              | H         | 3               |             3 |              |
-| Solidify Color themes and layout| L         | 3               |             2 |              |
-| Core HTML                       | M         | 2               |             3 |              |
-| Creating form/functionality     | H         | 3               |             3 |              |
-| Core CSS/Add Flexbox            | H         | 3               |             4 |              |
-| Attaching Social Media          | M         | 3               |             3 |              |
-| Adding Animation 		            | H         | 3             |             2 |              |
-| Reponsive Design/ Media querie  | H         | 3               |             2 |              |
-| Total                           |           | 33 hrs          |         33 hrs|              |
+Done: est and find the most appropriate playlist generation API: Top Choice - Spotify
 
-## Code Snippet
+Done:Behavioral Music Therapy research on equating moods with sounds
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+In Progress: Use Behavioral Therapy research to create thorough Moods API
 
-```
- <!-- let artistName = document.createElement('h1')
-  artistName.textContent = data.strArtist
-  dataContainer.append(artistName)
+In Progress: Test and find the most appropriate sentiment analysis API
 
-  if (data.strArtistClearart) {
-    let artistImg = document.createElement('img')
-    artistImg.src = data.strArtistClearart
-    dataContainer.append(artistImg)
-  } -->
-```
+
+
+MVP Development Progress -
+
+Done: Basic web app layout with React components
+
+Done: Basic service layer GET functionality to populate JSON data
+
+Done: Elementary version of the Internal Moods API to generate song genres based on mood
+
+In Progress: Integrate Internal Moods API to convert moods and emotions to song genres
+
+In Progress: Integrate Spotify API for playlist generation based on genres
+
+Not Started: Integrate Sentiment Analysis API to generate moods and emotions
+
+
