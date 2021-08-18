@@ -50,7 +50,7 @@ As a behavior therapist for 4 years with a background in education, I researched
 
 
 
-## MVP Development Progress -
+### MVP Development Progress -
 
 <ins>Done</ins>: Basic web app layout with React components
 
