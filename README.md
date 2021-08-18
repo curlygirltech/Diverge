@@ -1,8 +1,5 @@
-# Project Overview
+![Diverge](https://raw.githubusercontent.com/curlygirltech/Discographi/main/Diverge.png)
 
-## Project Name
-
-[Discographi](https://curlygirltech.github.io/Discographi/)
 
 ## Project Description
 This web app allows the user to search an artist or group to see the bio, genre and social media of that artist.
